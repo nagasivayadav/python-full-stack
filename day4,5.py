@@ -7,7 +7,7 @@ class student:
         print(f"Name: {self.name}, Age: {self.age}")
 
 
-s = Student("Mamatha", 22)
+s = Student("nagasiva", 22)
 s.display()
 
 # .............
@@ -117,7 +117,7 @@ class Developer(Employee):
         print("Team Size:", self.team_size)
 
 
-d = Developer(101, "Mamatha", "Python", 8)
+d = Developer(101, "nagasiva", "Python", 8)
 d.display()
 
 # .......
@@ -218,7 +218,7 @@ class Student:
         print("Roll Number:", self.roll_no)
 
 
-s1 = Student("Mamatha", 101)
+s1 = Student("nagasiva", 101)
 
 s1.display()
 
