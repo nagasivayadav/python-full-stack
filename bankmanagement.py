@@ -96,7 +96,6 @@ class Bank:
             account.display()
 bank = Bank()
 while True:
-    print("\n===== BANK MANAGEMENT SYSTEM =====")
     print("1. Create Account")
     print("2. Deposit")
     print("3. Withdraw")
