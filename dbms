@@ -1,0 +1,29 @@
+#create student table
+create table students(
+student_id int primary key,
+student_name varchar(20),
+age int,
+department varchar(20),
+email varchar(20) unique
+);
+insert into students values(101,'nagasiva',23,'mca','nagasiva@gmail.com');
+insert into students values(102,'naveen',25,'bca','naveen@gmail.com');
+insert into students values(103,'siva',22,'mba','siva@gmail.com');
+insert into students values(104,'dinesh',24,'mmm','dinesh@gmail.com');
+select * from students;
+# add column
+alter table students 
+add column phone_number int;
+#modify data type
+alter table students
+modify age tinyint;
+#rename
+alter table students
+rename column department to branch;
+#remove
+alter table students
+drop phone_number;
+
+desc students;
+#display
+select * from students;
