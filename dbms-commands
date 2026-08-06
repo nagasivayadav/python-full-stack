@@ -1,3 +1,5 @@
+commands
+
 create table student(
     student_id int primary key,
     student_name varchar(30),
@@ -60,6 +62,57 @@ truncate table students;
 drop table students;
 
 drop database college;
+
+# creat views
+create table st(name varchar(20),marks tinyint);
+insert into st values('naga','89');
+insert into st values('siva','87');
+insert into st values('roda','83');
+insert into st values('somu','80');
+
+create view marks as select * from st
+where marks='87';
+use college;
+
+#joins
+
+create table empp(emp_id int primary key,
+name varchar(20));
+insert into empp values(101,'naga');
+insert into empp values(102,'siva');
+insert into empp values(103,'roda');
+insert into empp values(104,'nagasiva');
+create table course(
+id int primary key,
+course_name varchar(20));
+insert into course values(101,'java');
+insert into course values(102,'sql');
+insert into course values(103,'c+');
+insert into course values(104,'python');
+ select * from empp;
+ select * from course;
+ select * from empp
+ inner	join course
+ on empp.empp_id = course.empp_id;
+  select * from empp
+ left join course
+ on empp.empp_id = course.empp_id;
+SELECT empp.empp_id,
+       empp.name,
+       course.course
+FROM empp
+RIGHT JOIN course
+ON empp.empp_id = course.emp_id;
+ALTER TABLE empp
+RENAME TO studentss;
+SELECT
+    studentss.name,
+    course.course
+FROM studentss
+CROSS JOIN course;
+DESCRIBE course;
+SHOW COLUMNS FROM course;
+
 
 
 
